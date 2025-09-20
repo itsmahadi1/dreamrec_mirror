@@ -445,7 +445,7 @@ if __name__ == '__main__':
     # args = parse_args()
     os.environ["CUDA_VISIBLE_DEVICES"] = str(args.cuda)
 
-    data_directory = './data/' + args.data
+    data_directory = f'./Data/{args.data}' + args.data
     data_statis = pd.read_pickle(
         os.path.join(data_directory, 'data_statis.df'))  # read data statistics, includeing seq_size and item_num
     seq_size = data_statis['seq_size'][0]  # the length of history to define the seq
